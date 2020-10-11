@@ -1,38 +1,96 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+body {
+  background-color: #6495ed;
+}
+
+.logo {
   text-align: center;
+  margin-top: 2%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo img {
+  height: 10vmax;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.scoreboard {
+  background-color: #0000003f;
+  border-radius: 0.5rem;
+  padding: 7px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: medium;
+  color: #ebebeb;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.image-div {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.character-image-div {
+  text-align: center;
+  width: 200px;
+  height: 460px;
+  border: 2px #567e7739 solid;
+  border-radius: 1rem;
+  padding: 1%;
+  margin: 1% 2% 1% 2%;
+  cursor: pointer;
+}
+
+.character-image-div:hover {
+  background-color: #dc143c7f;
+  transition: background-color 0.150s linear;
+}
+
+.character-image {
+  height: 100%;
+}
+
+.congratulations {
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
+
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mha-students {
+  width: 75vw;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.congratulations h1 {
+  font-size: 5vw;
+  font-family: 'Parisienne', cursive;
 }
